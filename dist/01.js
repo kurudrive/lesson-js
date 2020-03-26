@@ -49,4 +49,24 @@ var greet = function greet(name) {
   console.log("\u3053\u3093\u306B\u3061\u306F\uFF01".concat(name, "\u3055\u3093"));
 };
 
-greet('じょにー');
+greet('じょにー'); // III 総合
+
+var number1 = 103;
+var number2 = 72;
+var number3 = 189;
+var max = 0; // getMax関数を定義してください
+
+var getMax = function getMax(a, b, c) {
+  var array = [a, b, c];
+
+  for (var _i = 0; _i < array.length; _i++) {
+    if (max < array[_i]) {
+      max = array[_i];
+    }
+  }
+
+  return max;
+};
+
+max = getMax(number1, number2, number3);
+console.log("\u6700\u5927\u5024\u306F".concat(max, "\u3067\u3059"));

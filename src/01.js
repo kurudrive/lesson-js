@@ -65,7 +65,7 @@ let max = 0;
 // getMax関数を定義してください
 const getMax = (a,b,c) => {
   let array = [a,b,c];
-    for ( i=0;i<array.length;i++ ){
+    for ( let i = 0;i<array.length;i++ ){
       if ( max < array[i] ){
         max = array[i];
       }
