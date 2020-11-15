@@ -72,19 +72,25 @@ greet('じょにー');
 
 ////////////////////////////////////////////////////////////////////////////////////
 // 練習
+// getMax関数を定義してください
 
 const number1 = 103;
 const number2 = 72;
 const number3 = 189;
+
+// 最大値用の変数を定義
 let max = 0;
 
-// getMax関数を定義してください
+// 3つの引数を受け取る関数を定義
 const getMax = (a,b,c) => {
-  let array = [a,b,c];
+	// 受け取った引数を変数に配列で格納
+	let array = [a,b,c];
+  	// ローカル変数 array の要素の数を length で取得して、その数分 for でループする
     for ( let i = 0;i<array.length;i++ ){
-      if ( max < array[i] ){
-        max = array[i];
-      }
+		// ループ中の数字が max より大きかったら maz を書き換え
+		if ( max < array[i] ){
+			max = array[i];
+		}
     }
   return max;
 }
