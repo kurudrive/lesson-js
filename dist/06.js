@@ -73,8 +73,11 @@ var charactersFilter = [{
   id: 1,
   name: "たろう",
   age: 14
-}, // {id: 2, name:"はなこ", age: 5},
-{
+}, {
+  id: 2,
+  name: "はなこ",
+  age: 5
+}, {
   id: 3,
   name: "じろう",
   age: 100
@@ -82,14 +85,16 @@ var charactersFilter = [{
 
 var underTwenty = charactersFilter.filter(function (character) {
   return character.age < 20;
-});
+}); // 条件に合うものを複数返すので、配列で帰ってくる。
+
 console.log(underTwenty);
 /* -------------------------------------*/
-// mapメソッド
+// mapメソッド ( 元の配列の要素すべてを処理して新しい配列をつくって返す )
 
 /* -------------------------------------*/
 
-var numbersMap = [1, 2, 3, 4]; // 定数numbersにmapメソッドを使って配列を作り、定数doubledNumbersに代入
+console.log('- Map -------------------');
+var numbersMap = [1, 2, 3, 4]; // 定数numbersMapにmapメソッドを使って配列を作り、定数 doubledNumbers に代入
 
 var doubledNumbers = numbersMap.map(function (number) {
   return number * 2;

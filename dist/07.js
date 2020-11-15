@@ -1,5 +1,11 @@
 "use strict";
 
+/* -------------------------------------*/
+// コールバック関数
+
+/* -------------------------------------*/
+console.log('- callback -------------------');
+
 var printInit = function printInit() {
   console.log("コールバック関数が呼ばれました。");
 };
@@ -17,7 +23,7 @@ var printInit2 = function printInit2() {
 };
 
 var call2 = function call2(callback) {
-  console.log("コールバック関数を呼び出します。");
+  console.log("コールバック関数２を呼び出します。");
   callback();
 };
 
@@ -35,3 +41,10 @@ var call3 = function call3(callback) {
 call3(function (name, age) {
   console.log("".concat(name, "\u306F").concat(age, "\u6B73\u3067\u3059\u3002"));
 });
+console.log('- callback 使わずにす直接 -------------------');
+
+var normal = function normal(name, age) {
+  console.log("".concat(name, "\u306F").concat(age, "\u6B73\u3067\u3059\u3002"));
+};
+
+normal("にんじゃわんこ", 14);
