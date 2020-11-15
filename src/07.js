@@ -13,7 +13,7 @@ const printInit = () => {
   //////////////////////////////////////////
 
   const printInit2 = () => {
-	console.log("コールバック関数１");
+	console.log("コールバック関数２");
   };
   
   const call2 = (callback) => {
@@ -30,12 +30,12 @@ const printInit = () => {
 
   //////////////////////////////////////////
 
-  const call = (callback) => {
+  const call3 = (callback) => {
 	callback("にんじゃわんこ", 14);
   };
   
   // 関数callの引数の中で2つの引数を取る関数を追加してください
-  call((name,age) => {
+  call3((name,age) => {
 	console.log(`${name}は${age}歳です。`);
   });
   
