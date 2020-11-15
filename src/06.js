@@ -1,7 +1,13 @@
+/* -------------------------------------*/
+// push() で配列の項目を追加
+/* -------------------------------------*/
 const charactersPush = ["aaa", "bbb", "ccc"];
 // Push : 配列に追加
 charactersPush.push('ddd');
 
+console.log(charactersPush);
+
+console.log('--------------------');
 
 /* -------------------------------------*/
 // forEachとコールバック関数
@@ -14,16 +20,19 @@ charactersForEach.forEach((character)=>{
 });
 
 /* -------------------------------------*/
-// findメソッド
+// findメソッド（一つだけとりだす）
 /* -------------------------------------*/
+
+console.log('- find -------------------');
 
 const numbersFind = [1, 3, 5, 7, 9];
 // 配列の中から条件にあったら要素を返す
 const foundNumber = numbersFind.find((number) => {
+  // 余りが 0 の場合に返す
   return number % 3 === 0;
 });
-console.log(foundNumber);
-
+// この場合9でも余りは0だが、順番に探して3の時点で条件に合うので処理が終了する
+console.log( 'find : ' + foundNumber);
 
 // 配列の要素がオブジェクトでも使える
 
@@ -36,13 +45,17 @@ const charactersFind = [
 
 // 定数charactersからidが3のオブジェクトを定数foundCharacterに代入
 const foundCharacter = charactersFind.find((character)=>{
+  // characterにはオブジェクトが投げられる
+  // id の値が 3 のオブジェクトを返す
   return character.id === 3;
 });
 console.log(foundCharacter);
 
 /* -------------------------------------*/
-// filterメソッド
+// filterメソッド (全て取り出す)
 /* -------------------------------------*/
+
+console.log('- filter -------------------');
 
 const numbersFilter = [1, 2, 3, 4];
 // filterメソッドは条件に合う要素をすべて取り出してくれる
@@ -62,15 +75,18 @@ const charactersFilter = [
 const underTwenty = charactersFilter.filter((character)=>{
   return character.age < 20;
 });
+// 条件に合うものを複数返すので、配列で帰ってくる。
 console.log(underTwenty);
 
 /* -------------------------------------*/
-// mapメソッド
+// mapメソッド ( 元の配列の要素すべてを処理して新しい配列をつくって返す )
 /* -------------------------------------*/
+
+console.log('- Map -------------------');
 
 const numbersMap = [1, 2, 3, 4];
 
-// 定数numbersにmapメソッドを使って配列を作り、定数doubledNumbersに代入
+// 定数numbersMapにmapメソッドを使って配列を作り、定数 doubledNumbers に代入
 const doubledNumbers = numbersMap.map((number)=>{
   return number * 2;
 });

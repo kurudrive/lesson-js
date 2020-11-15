@@ -1,8 +1,14 @@
 "use strict";
 
+/* -------------------------------------*/
+// push() で配列の項目を追加
+
+/* -------------------------------------*/
 var charactersPush = ["aaa", "bbb", "ccc"]; // Push : 配列に追加
 
 charactersPush.push('ddd');
+console.log(charactersPush);
+console.log('--------------------');
 /* -------------------------------------*/
 // forEachとコールバック関数
 
@@ -13,16 +19,19 @@ charactersForEach.forEach(function (character) {
   console.log(character);
 });
 /* -------------------------------------*/
-// findメソッド
+// findメソッド（一つだけとりだす）
 
 /* -------------------------------------*/
 
+console.log('- find -------------------');
 var numbersFind = [1, 3, 5, 7, 9]; // 配列の中から条件にあったら要素を返す
 
 var foundNumber = numbersFind.find(function (number) {
+  // 余りが 0 の場合に返す
   return number % 3 === 0;
-});
-console.log(foundNumber); // 配列の要素がオブジェクトでも使える
+}); // この場合9でも余りは0だが、順番に探して3の時点で条件に合うので処理が終了する
+
+console.log('find : ' + foundNumber); // 配列の要素がオブジェクトでも使える
 
 var charactersFind = [{
   id: 1,
@@ -43,14 +52,17 @@ var charactersFind = [{
 }]; // 定数charactersからidが3のオブジェクトを定数foundCharacterに代入
 
 var foundCharacter = charactersFind.find(function (character) {
+  // characterにはオブジェクトが投げられる
+  // id の値が 3 のオブジェクトを返す
   return character.id === 3;
 });
 console.log(foundCharacter);
 /* -------------------------------------*/
-// filterメソッド
+// filterメソッド (全て取り出す)
 
 /* -------------------------------------*/
 
+console.log('- filter -------------------');
 var numbersFilter = [1, 2, 3, 4]; // filterメソッドは条件に合う要素をすべて取り出してくれる
 
 var evenNumbers = numbersFilter.filter(function (number) {
@@ -61,11 +73,8 @@ var charactersFilter = [{
   id: 1,
   name: "たろう",
   age: 14
-}, {
-  id: 2,
-  name: "はなこ",
-  age: 5
-}, {
+}, // {id: 2, name:"はなこ", age: 5},
+{
   id: 3,
   name: "じろう",
   age: 100

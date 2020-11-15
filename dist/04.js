@@ -22,6 +22,9 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+//////////////////////////////////////////
+// オブジェクトに関数を持たせる
+//////////////////////////////////////////
 var user = {
   name: '山田太郎',
   age: 2,
@@ -29,7 +32,9 @@ var user = {
     console.log('_|＼○_ﾋｬｯ ε=＼＿○ﾉ ﾎｰｳ!!');
   }
 };
-user.greet(); ////////////////////////////
+user.greet(); //////////////////////////////////////////
+// クラス
+//////////////////////////////////////////
 
 var Animal = /*#__PURE__*/function () {
   // classが呼び出された時に実行される
@@ -64,9 +69,9 @@ var animal = new Animal("たろう", 10); // 定数animalの値を出力
 
 console.log("\u540D\u524D:".concat(animal.name));
 console.log("\u5E74\u9F62:".concat(animal.age));
-animal.info(); ////////////////////////////
+animal.info(); //////////////////////////////////////////
 // クラスの継承
-////////////////////////////
+//////////////////////////////////////////
 
 var Dog = /*#__PURE__*/function (_Animal) {
   _inherits(Dog, _Animal);
